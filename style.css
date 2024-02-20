@@ -45,6 +45,7 @@
 .content{
     padding: 2%;
 }
+
 .content h2{
     font-size: clamp(1.5rem, 1.6vw, 1.8rem)
 }

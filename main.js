@@ -1,4 +1,4 @@
-//const API_KEY ='af227da480994f1b9fa6c3a1b1b23578';
+const API_KEY ='af227da480994f1b9fa6c3a1b1b23578';
 let newsList=[];
 const menus = document.querySelectorAll(".menus button")
 menus.forEach(menu=>menu.addEventListener("click",(event)=>getNewsByCategory(event)))
