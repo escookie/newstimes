@@ -1,3 +1,15 @@
+.inputArea{
+    margin-top: 1em;
+    display: flex;
+    justify-content: right;
+}
+.inputArea > input{
+    border: 1px solid #bababa;
+}
+.inputArea > button{
+    margin-left: 5px;
+    border: 1px solid #bababa;
+}
 .head-line{
     margin-top: 1em;
     display: flex;
