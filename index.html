@@ -7,16 +7,37 @@
     <title>Document</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.min.css"/>        
+    <link rel="stylesheet" href="style.css">    
 </head>
 
 <body>
-    <section class="container">
-        <div class="inputArea">
-            <input id="search-input"/>
-            <button onclick="getNewsByKeyword()">검색</button>
+    <div class="side-menu" id="mySidenav">
+        <button class="closebtn" onclick="closeNav()">&times;</button>
+        <div class="side-menu-list" id="menu-list">
+            <button>Business</button>
+            <button>Entertainment</button>
+            <button>General</button>
+            <button>Health</button>
+            <button>Science</button>
+            <button>Sports</button>
+            <button>Technology</button>
         </div>
-        <section>
+    </div>
+    
+    <section class="container">
+        <section class="head-line-section">
+            <div class="search-tray">
+                <i class="fas fa-bars hide icon-button" onclick="openNav()"></i>                
+                <img src="images/search.jpg" onclick="openSearchBox()">
+                <span id="input-area">
+                    <input type="text" id="search-input" placeholder="search" />
+                    <button class="search-button" onclick="getNewsByKeyword()">Go</button>
+                </span>
+
+            </div>
+        </section>
+        <section>            
             <div class="head-line">
                 <svg viewBox="0 0 184 25" fill="#000" aria-hidden="true">
                     <path
@@ -24,7 +45,7 @@
                     </path>
                 </svg>
             </div>
-            <div class="menus">
+            <div class="menus" id="menu-list">
                 <button>Business</button>
                 <button>Entertainment</button>
                 <button>General</button>
@@ -37,25 +58,45 @@
         <section id="news-board">
             <div class="row news">
                 <div class="col-lg-4">
-                    <img class="news-img-size" src="https://static01.nyt.com/images/2024/02/18/multimedia/18europe-security-mood-lbcj/18europe-security-mood-lbcj-threeByTwoSmallAt2X.jpg" alt="">
+                    <img class="news-img-size" src="https://flexible.img.hani.co.kr/flexible/normal/639/426/imgdb/original/2024/0221/20240221501350.jpg" alt="">
                 </div>
                 <div class="col-lg-8 content">
-                    <h2>타이틀</h2>
+                    <h2>의대생 하루에 7620명 휴학 신청…3개 학교선 수업 거부 - 한겨레</h2>
                     <p>
-                        기사내용
+                        40개 의과대학 학생들이 정부의 의대 정원 확대 방침에 반발해 집단 휴학에 나서겠다고 밝힌 가운데, 20일 하루(저녁 6시까지) 동안 27개 대학에서 7620명이 휴학을 신청한 것으로 집계됐다. 19일 신청된 것을 합치면 의대생 8753명의 휴학계가 대학 쪽에 접수된
                     </p>
                     <div>
-                        kbs *2021-11-11
+                        Hani.co.kr * 2024-02-21T04:35:00Z
                     </div>
+                </div>                            
+            </div>
+            <div class="row news">
+                <div class="col-lg-4">
+                    <img class="news-img-size" src="https://cdn.news.unn.net/news/thumbnail/202402/559800_370290_393_v150.jpg" alt="">
                 </div>
+                <div class="col-lg-8 content">
+                    <h2>KAIST 김준 교수팀, 흡연과 음주가 구강암 촉진 밝혀 - 한국대학신문</h2>
+                    <p>
+                        [한국대학신문 이정환 기자] 흡연과 음주는 세포에서 활성산소의 부하를 증가시키고 높은 수준의 산화스트레스를 유발한다고 알려져 있다. 하지만 아직 산화스트레스가 구강암의 발달을 촉진하는 구체적인 기전은 명확히 밝혀지지 않았다.KAIST(총장 이광형)는 의과학대학원 김준 교수 연구팀이 발암 위험 인자인 흡연과 음주가 구강암의 발생과 성장에 관여하는 새로운 기전을 규명했다고 21일 밝혔다.연구팀은 이번 연구에서 흡연 및 음주가 직접적인 DNA 손상뿐 아니라 산화스트…
+                    </p>
+                    <div>
+                        Unn.net * 2024-02-21T03:40:00Z
+                    </div>
+                </div>                            
             </div>
         </section>
+        <nav aria-label="Page navigation example">
+            <ul class="pagination">
+              
+            </ul>
+          </nav>
 
     </section>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
         crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.18.0/moment.min.js"></script>
     <script src="main.js"></script>
 </body>
 
