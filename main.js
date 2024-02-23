@@ -96,7 +96,7 @@ const render=()=>{
             news.publishedAt
           ).fromNow()}</div>
         <div>
-            ${news.source.name} * ${news.publishedAt}
+            
         </div>
     </div>
     </div>`
